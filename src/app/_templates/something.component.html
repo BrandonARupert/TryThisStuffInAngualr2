@@ -1,0 +1,11 @@
+
+<h2 class="sans">Tasks</h2>
+<div>{{ stuff.length === 0 ? "No Tasks" : "" }}</div>
+<div class = "displayThing" *ngFor = "let thing of stuff">
+
+        <div >Scheduled {{thing.weekday}} Event {{thing.getId()}}</div> 
+            <button
+                (click)="thing.changeCheck()" class = "editButton">{{thing.checked === true ? "Yes" : "No"}} 
+            </button>
+
+</div>
